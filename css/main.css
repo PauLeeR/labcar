@@ -1,0 +1,52 @@
+#hero{
+	background-image: url(../img/taxi.jpg);
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-weight: 800;
+	background-position: center bottom;
+}
+
+.navbar-default{
+	z-index: 1;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	border-color: transparent;
+}
+
+.navbar-header{
+	padding-left: 5em;
+}
+
+.navbar-toggle{
+	float: left;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: black;
+}
+
+.caja-become{
+	float: right;
+	background-color: #f7b617;
+	width: 463px;
+	height: 350px;
+	padding: 40px 30px;
+	position: absolute;
+	top: 200px;
+	right: 0;
+	color: white;
+}
+font-weight: bolder;}
+
+div .form-group input{
+	/*padding: 10px;
+	margin: 10px;
+	font-size: 12px;*/
+	border: none;
+	border-bottom: 2px solid whitesmoke;
+	outline: 0;
+	background-color: transparent;
+}	
