@@ -7,7 +7,7 @@
 	<!--CDN Bootstrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600" rel="stylesheet">
 	<!--CDN Font-Awesome-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- Linkear js Font Awesome -->
@@ -20,7 +20,7 @@
 	<section id="hero">
 		<!-- navbar default -->
 		<nav class="navbar navbar-default">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
 						<span class="sr-only">Toggle navigation</span>
@@ -42,19 +42,19 @@
 		<header id="header">
 			<div class="caja-become container-fluid">
 				<div class="row">
-					<div class="col-lg-offset-7 col-lg-5 col-md-offset-7 col-md-5 col-sm-5 col-xs-12">
-						<h2>Disfruta del viaje</h2>
-						<h2>Eres dueño de tu tiempo</h2>
-						<h4>Viaja con <img src="img/logo-blanco.png" alt=""></h4>
+					<div class="">
+						<h2 class="disfruta">Disfruta del viaje</h2>
+						<h2 class="dueño">Eres dueño de tu tiempo</h2>
+						<h4 class="viaja">Viaja con <img src="img/logo-blanco.png" alt="" class="conductor"></h4>
 						<form>
 							<div class="form-group">
-								<label for="">REGÍSTRATE:</label>
-								<input type="" class="line"> 
+								<label for="">REGÍSTRATE</label><br>
+								<input type=""> 
 								<label for="">O bien:</label>
-								<input type="" class="line">
+								<input type="">
 							</div>
 							<div class="form-group">
-								<button type="submit" name="button" id="btn-conductor" class="btn-submit">Conviértete en conductor</button>
+								<button type="submit" name="button" id="btn-conductor" class="btn-submit">Conviértete en un conductor</button>
 							</div>
 						</form>
 					</div>
@@ -65,11 +65,11 @@
 	<!-- sección información -->
 	<section id="info" class="second-section">
 		<div class="container">
-			<div class="row">
+			<div class="row white-border">
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 					<img src="img/celular.png" class="img-responsive" alt="phone">
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 text-left">
 					<h3>Descarga la nueva app</h3>
 					<p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
 					<p>Con solo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a dónde ir.</p>
@@ -81,7 +81,7 @@
 	<section id="conduce" class="third-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-offset-9 col-lg-3 col-md-offset-9 col-md-3 col-sm-3 col-xs-12">
+				<div class="col-lg-offset-8 col-lg-4 col-md-offset-8 col-md-4 col-sm-12 col-xs-12">
 					<h3>Conduce cuando quieras</h3>
 					<p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
 					<button type="button">Conviértete en conductor</button>
@@ -94,17 +94,30 @@
 	<section id="tarifas" class="fourth-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-					<h3>Tarifas</h3>
-					<p>Consulta las tarifas LabCar aquí</p><br>
-					<img src="img/circulo.png" class="img-responsive">
-					<input type="text" id="origen" placeholder="Ingrese su punto de partida">
-					<img src="img/flecha.png" class="img-responsive" >
-					<input type="text" id="destino" placeholder="Ingrese un destino">
-					<button type="button" id="ruta" class="center-block">¡TRAZAR RUTA!</button>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mapita">
+					<div id="findme"></div> <!-- para que funcione el trazado de ruta, aunque no hay boton encuentrame -->
+					<div class="col-md-6 col-xs-12 text-center">
+						<h3>Tarifas</h3>
+						<p>Consulta las tarifas LabCar aquí</p><br>
+						<img src="img/circulo.png" class="img-responsive">
+						<input type="text" id="origen" placeholder="Ingrese su punto de partida" class="form-control">
+						<img src="img/flecha.png" class="img-responsive" >
+						<input type="text" id="destino" placeholder="Ingrese un destino" class="form-control">
+						<div class="ruta2">
+							<button type="button" id="ruta" class="btn btn-default">¡TRAZAR RUTA!</button>
+						</div>
+					</div>
 				</div>
-				<div id="map" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-					<!-- MAPA -->
+
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+					<div class="container">
+						<div class="row">
+							<div class="mapa">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="map">
+								</div>  <!-- mapitaaaa-->
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -121,8 +134,13 @@
 			<hr>
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<!-- iconos -->
-					
+					<!-- iconos abajito-->
+					<i class="fa fa-facebook iconos-bottom" aria-hidden="true"></i>
+					<i class="fa fa-twitter iconos-bottom" aria-hidden="true"></i>
+					<i class="fa fa-linkedin iconos-bottom" aria-hidden="true"></i>
+					<i class="fa fa-apple iconos-bottom" aria-hidden="true"></i>
+					<i class="fa fa-play iconos-bottom" aria-hidden="true"></i>
+
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 					<ul>
@@ -149,8 +167,8 @@
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<img src="img/app-store.png" class="img-responsive" alt="app store">
-					<img src="img/google-play.png" class="img-responsive" alt="google play">
+					<img src="img/app-store.png" class="img-responsive" alt="apple">
+					<img src="img/google-play.png" class="img-responsive" alt="android">
 				</div>
 			</div>
 			<hr>
@@ -160,7 +178,7 @@
 		</div>
 	</footer>
 
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4P856GQRhEJ8aozVfoVQswmTBuCgyJwU&callback=initMap&libraries=places"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYBODf36sI09BLoZ8B_VdDc2q7vhDbOo&callback=initMap&libraries=places"></script>
 	<!-- Script de jQuery y Bootstrap -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
