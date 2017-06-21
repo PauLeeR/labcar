@@ -1,4 +1,4 @@
-var map;
+var map;  /*inicializo el mapa*/
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
@@ -31,7 +31,11 @@ function initMap() {
     }
   }
 
-  document.getElementById("findme").addEventListener("click", buscar);
+  //document.getElementById("findme").addEventListener("click", buscar); NO SIRVE ESTA FUNCIÓN, HARÉ UN EVENTO ONLOAD PARA QUE PREGUNTE SI PERMITE ACCEDER A LA UBICACIÓN DEL USUARIO EN CUANTO CARGUE LA PAGINA// 
+
+ window.addEventListener("load", buscar); 
+
+    
   var latitud, longitud;
 
   var found = function(posicion){
@@ -52,6 +56,7 @@ function initMap() {
   var notFound = function(error){
     alert("No pudimos encontrar tu ubicación");
   }
+/* autocompletado de los input origen y destino (ruta)*/
 
   var desde = (document.getElementById("origen"));
   var autocompletar = new google.maps.places.Autocomplete(desde);
