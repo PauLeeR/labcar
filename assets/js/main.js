@@ -6,24 +6,18 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  var iconBase = "http://maps.google.com/mapfiles/kml/shapes";//creo un icono que servirá como marcador del mapa en lugar del habitual
+ /* var iconBase = "http://maps.google.com/mapfiles/kml/shapes";//creo un icono que servirá como marcador del mapa en lugar del habitual
   var icon = {
-    bike: {
+    taxi: {
       icon: iconBase + 'cycling.png'
     }
   };
-
+*/
   var feature = {
       //position: new google.maps.LatLng(-33.91722, 151.23064),
-      type: "bike"
+      type: "cab"
     }
 
-// Create marker (BIKE).
-  /*var marker = new google.maps.Marker({
-    position: {lat:latitud, lng:longitud},
-    icon: icon[feature.type].icon,
-    map: map
-  });*/
 
   function buscar(){
     if(navigator.geolocation){
@@ -33,7 +27,7 @@ function initMap() {
 
   //document.getElementById("findme").addEventListener("click", buscar); NO SIRVE ESTA FUNCIÓN, HARÉ UN EVENTO ONLOAD PARA QUE PREGUNTE SI PERMITE ACCEDER A LA UBICACIÓN DEL USUARIO EN CUANTO CARGUE LA PAGINA// 
 
- window.addEventListener("load", buscar); 
+ //window.addEventListener("load", buscar); 
 
     
   var latitud, longitud;
@@ -46,7 +40,7 @@ function initMap() {
       position: {lat:latitud, lng:longitud},
       animation: google.maps.Animation.DROP,
       map: map, 
-      icon: 'http://icons.iconarchive.com/icons/aha-soft/transport/48/bike-icon.png'//animador/marcador del mapa
+      icon: 'http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat/64/taxi-icon.png'//animador/marcador del mapa
     });
 
     map.setZoom(17);

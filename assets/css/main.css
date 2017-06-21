@@ -134,6 +134,34 @@ div.row.white-border{
 	background-position: center;
 }
 
+.right-box{
+	position: relative;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	height: 65vh;
+	padding: 10px;
+	z-index: 1;
+}
+
+.conduce {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    height: 20%;
+    font-weight: bold;
+}
+
+.btn-drive{
+	background-color: #f7b617;
+	margin-bottom: 430px;
+    border: #f7b617;
+    padding: 11px;
+    padding-left: 27px;
+    padding-right: 27px;
+    font-size: 17px;
+    color: white;
+}
+
 /*sección tarifas*/
 #tarifas{
 	background-color: #f7b617; 
