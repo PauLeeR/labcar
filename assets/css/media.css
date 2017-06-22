@@ -1,6 +1,21 @@
-@media only screen and (min-width: 1281px) {
+@media only screen and (min-width: 1px) and (max-width: 480px) {
+	 /* logo  nav*/
+    .logo-nav {
+        margin-left: 60px;
+    }
+    /* desaparece el texto de la segunda sección info/descarga */
+    .disappear {
+        display: none;
+    }
+    /* media footer */
+    .logo-white-footer {
+        margin-left: 20px;
 
 }
+
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
 
 

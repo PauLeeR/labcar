@@ -1,11 +1,11 @@
 * {
-    font-family: 'Merriweather Sans', sans-serif;
-    padding: 0;
-    margin: 0;
+	font-family: 'Merriweather Sans', sans-serif;
+	padding: 0;
+	margin: 0;
 }
 
 body {
-    /*overflow-x: hidden;*/
+	/*overflow-x: hidden;*/
 }
 
 /*section one "hero"*/
@@ -59,6 +59,7 @@ button.navbar-toggle{
 	padding-left: 20px;
 }
 
+/*parte 2 sección 1*/
 .disfruta{
 	font-weight: bold;
 	margin-bottom: 0px;
@@ -82,7 +83,7 @@ button.navbar-toggle{
 button#btn-conductor.btn-submit{
 	background-color: whitesmoke;
 	border-color: transparent;
-  	border-radius: 12px;
+	border-radius: 12px;
 	height: 4vh;
 	width: 60%;
 	color: black;
@@ -99,25 +100,38 @@ button#btn-conductor.btn-submit{
 	background-color: transparent;
 }	
 
-/*sección información*/
+/*sección información/descarga*/
 #info{
 	background-color: #f7b617;
 	height: 80vh;
 	padding-top: 60px;
+	padding-bottom: 50px;
 	color: whitesmoke;
 	font-size: 16px;
 	/*left: 0px;*/
 }
 
-#info h3{
-	font-weight: bold;
+.disappear {
+	padding-top: 50px;
 }
 
-div.row.white-border{
-	border: 1px solid white;
+div.container-fluid.white-border {
+	border: 1px solid whitesmoke;
+	padding: 10px;
 	border-left: none;
 	float: left;
+	margin-left: -15px;
 }
+
+#info h3{
+	font-weight: bold;
+	width: auto;
+}
+
+.text-left{
+	padding-top: 50px;
+}
+
 
 /*sección conduce*/
 #conduce{
@@ -135,31 +149,36 @@ div.row.white-border{
 }
 
 .right-box{
-	position: relative;
-	overflow: auto;
+	position: absolute;
 	background-color: rgba(0,0,0,0.5);
 	color: white;
 	height: 65vh;
-	padding: 10px;
+	padding: 50px 40px;
 	z-index: 1;
+	right: 0;
+	float: right;
+}
+
+.right-box h3{
+
 }
 
 .conduce {
-    margin-top: 100px;
-    margin-bottom: 10px;
-    height: 20%;
-    font-weight: bold;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	height: 20%;
+	font-weight: bolder;
 }
 
 .btn-drive{
 	background-color: #f7b617;
 	margin-bottom: 430px;
-    border: #f7b617;
-    padding: 11px;
-    padding-left: 27px;
-    padding-right: 27px;
-    font-size: 17px;
-    color: white;
+	border: #f7b617;
+	padding: 11px;
+	padding-left: 27px;
+	padding-right: 27px;
+	font-size: 17px;
+	color: white;
 }
 
 /*sección tarifas*/
@@ -188,13 +207,43 @@ div.row.white-border{
 
 .mapa{
 	width: 480px;
-    height: 440px;
-    padding: 10px;
-    border: 1px solid white;
+	height: 440px;
+	padding: 10px;
+	border: 1px solid white;
 }
 
 /*footer*/
- .iconos-bottom{
- 	padding-bottom: 0;
- } 
+#footer{
+	background-color: #2b2b2b;
+}
 
+.logo-white-footer {
+	/*background-color: #2b2b2b;*/
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/*.links-footer {
+	margin-bottom: 10px;
+	list-style: none;
+	color: red;
+	text-decoration: none;
+}*/
+
+.iconos-bottom{
+	padding-bottom: 0;
+	cursor: pointer;
+		color: whitesmoke;
+} 
+
+.apps{
+	margin-top: 140px;
+	margin-bottom: 20px;
+	width: 120px;
+	height: 38px;
+	
+}
+
+.img-footer{
+	margin-top: 140px;
+}
