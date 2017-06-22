@@ -59,6 +59,8 @@ button.navbar-toggle{
 	padding-left: 20px;
 }
 
+
+
 /*parte 2 sección 1*/
 .disfruta{
 	font-weight: bold;
@@ -99,6 +101,37 @@ button#btn-conductor.btn-submit{
 	outline: 0;
 	background-color: transparent;
 }	
+.show-up{
+	position: relative;
+	background-color: #f7b617;
+	padding: 50px;
+	color: white;
+	position: absolute;
+	z-index: 1;
+	float: right;
+	right: -30px;
+	height: 300px;
+	width: 413px;
+	padding-top: 60px
+	bottom: 100px;
+	top: 100px;
+}
+
+.comienza{
+	margin-top: -4px;
+	font-size: 40px;
+	margin-bottom: 8px;
+}
+
+.move-btn{
+	padding-top: 30px;
+	color: black;
+}
+
+.btn-driver{
+	width: 30vh;
+	font-size: 20px;
+}
 
 /*sección información/descarga*/
 #info{
@@ -192,7 +225,6 @@ div.container-fluid.white-border {
 #origen, #destino {
 	background-color: #f7b617;
 	border-radius: 1px white;
-
 }
 
 .ruta2{
@@ -215,35 +247,49 @@ div.container-fluid.white-border {
 /*footer*/
 #footer{
 	background-color: #2b2b2b;
+	padding-top:50px;
+	padding-bottom: 20px;
+	text-decoration: none; 
+	height: 570px;
 }
 
-.logo-white-footer {
-	/*background-color: #2b2b2b;*/
+.logo-white-footer{
 	margin-top: 50px;
 	margin-bottom: 50px;
+	
 }
 
-/*.links-footer {
+.links-footer {
 	margin-bottom: 10px;
 	list-style: none;
-	color: red;
 	text-decoration: none;
-}*/
+	color: white;
+	padding-bottom: 10px;
+}
+
+li a.links-footer{    /*no me resulta sacar las viñetas de la lista, no sé como llamarlo*/
+	list-style: none;
+	text-decoration: none;
+	padding-top: 10px;
+}
 
 .iconos-bottom{
 	padding-bottom: 0;
 	cursor: pointer;
-		color: whitesmoke;
+	color: whitesmoke;
 } 
 
 .apps{
-	margin-top: 140px;
-	margin-bottom: 20px;
-	width: 120px;
-	height: 38px;
-	
+	margin-top: 50px;	
 }
 
 .img-footer{
-	margin-top: 140px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.subfooter{
+	color: white;
+	height: 60px;
+	/*background-color: #2b2b2b;*/
 }

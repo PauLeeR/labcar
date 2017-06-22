@@ -1,30 +1,38 @@
 @media only screen and (min-width: 1px) and (max-width: 480px) {
-	 /* logo  nav*/
-    .logo-nav {
-        margin-left: 60px;
-    }
-    /* desaparece el texto de la segunda sección info/descarga */
-    .disappear {
-        display: none;
-    }
-    /* media footer */
-    .logo-white-footer {
-        margin-left: 20px;
+	/* logo  nav*/
+	.logo-nav {
+		margin-left: 60px;
+	}
+	/* desaparecen algunos textos*/
+	.disappear {
+		display: none;
+	}
+
+	.show-up{
+		display: block;
+	}
+
+	.white-subheading{
+		visibility: visible;
+	}
+	/* media footer */
+	.logo-white-footer {
+		margin-left: 20px;
+
+	}
 
 }
 
 
+	@media only screen and (min-width: 768px) and (max-width: 1280px) {
 
 
-@media only screen and (min-width: 768px) and (max-width: 1280px) {
+	}
+	@media only screen and (min-width: 481px) and (max-width: 767px) {
 
 
-}
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+	}
+	@media only screen and (min-width: 1px) and (max-width: 480px) {
 
 
-}
-@media only screen and (min-width: 1px) and (max-width: 480px) {
-
-    
-}
+	}

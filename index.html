@@ -40,7 +40,7 @@
 			</div><!-- /.container -->
 		</nav><!-- /.navbar -->
 		<header id="header">
-			<div class="col-lg-offset-8 col-lg-4 col-md-offset-8 col-md-4 col-xs-12 caja-become disappear">
+			<div class="col-lg-offset-8 col-lg-4 col-md-offset-8 col-md-4 hidden-xs caja-become disappear">
 				<div class="row">
 					<div class="">
 						<h2 class="disfruta">Disfruta del viaje</h2>
@@ -61,16 +61,14 @@
 				</div>
 			</div>
 		</header>
-	</section>
+		<!-- header que se ve en la versión mobile -->
 
-	<!-- header que se ve en la versión mobile -->
-	<section class="photo-container header-mobile">
-		<div class="container-fluid container-card-two">
-			<div class="hidden-lg col-md-offset-8 col-md-4 col-xs-12 text-card-two-media aparecer">
-				<div>
-					<h3 class="color-white mrg-left-tex media-text-card">Comienza a viajar con</h3>
-					<img class="img-responsive logo-media-card" src="assets/img/logo-blanco.png" alt="Logo Blanco">
-					<p><button type="button" class="btn btn-conductor pointer mrg-left-tex">Descarga el app</button></p>
+		<div class="container-fluid">
+			<div class="hidden-lg hidden-md hidden-sm col-xs-offset-1 col-xs-11">
+				<div class="show-up">
+					<h3 class="comienza">Comienza a viajar con</h3>
+					<img class="img-responsive logo-whitey" src="assets/img/logo-blanco.png" alt="logo-blanco">
+					<div class="move-btn"><button type="button" class="btn btn-driver">Descarga el app</button></div>
 				</div>
 			</div>
 		</div>
@@ -102,14 +100,14 @@
 	</section>
 
 	<!-- sección información mobile -->
-	<section class="second-section sct-mobile">
+	<section class="second-section sct-mobile disappear">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="hidden-lg hidden-md col-xs-offset-1 col-xs-11">
 					<div class="container-fluid">
 						<div class="row container-celu-mobile">
-							<div class="col-xs-12">
-								<h3 class="white-subheading text-center">La nueva app</h3>
+							<div class="">
+								<h3 class="hidden-md hidden-lg col-xs-12 white-subheading text-center">La nueva app</h3>
 								<img class="img-responsive celu" src="assets/img/celular.png" alt="celu">
 							</div>
 						</div>
@@ -138,25 +136,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mapita">
-					<div id="findme"></div> <!-- para que funcione el trazado de ruta, aunque no hay boton encuentrame -->
-					<div class="col-md-6 col-xs-12 text-center">
+					<div class="col-md-12 col-xs-12">
 						<h3>Tarifas</h3>
 						<p>Consulta las tarifas LabCar aquí</p><br>
+					</div>
+					<div class="col-md-12 col-xs-12">
 						<img src="assets/img/circulo.png" class="img-responsive">
 						<input type="text" id="origen" placeholder="Ingrese su punto de partida" class="form-control">
+					</div>
+					<div class="col-md-12 col-xs-12">
 						<img src="assets/img/flecha.png" class="img-responsive" >
 						<input type="text" id="destino" placeholder="Ingrese un destino" class="form-control">
-						<div class="ruta2">
-							<button type="button" id="ruta" class="btn btn-default">¡TRAZAR RUTA!</button>
-						</div>
 					</div>
+					<div class="col-md-2 col-xs-12 ruta2">
+						<button type="button" id="ruta" class="btn btn-default">¡TRAZAR RUTA!</button>
+					</div>
+					
 				</div>
 
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+				<div class="hidden-xs hidden-sm col-md-6 col-lg-6">
 					<div class="container disappear">
 						<div class="row">
 							<div class="mapa">
-								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="map">
+								<div class="hidden-xs hidden-sm col-md-12 col-lg-12" id="map">
 								</div>  <!-- mapitaaaa-->
 							</div>
 						</div>
@@ -167,63 +169,75 @@
 	</section>
 
 	<!-- footer -->
-	<footer id="footer" class="color-white">
-		<div class="container">
-			<div class="row logo-white-footer">
-				<img src="assets/img/logo-blanco.png" class="assets/img-responsive logo-footer" alt="logo-white">
-				<hr>				
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-sm-12 col-xs-12">
-						<ul>
-							<li><a href="#" class="links-footer">Viaja</a></li>
-							<li><a href="#" class="links-footer">Conduce</a></li>
-							<li><a href="#" class="links-footer">Ciudades</a></li>
-							<li><a href="#" class="links-footer">Tarifas</a></li>
-							<li><a href="#" class="links-footer">Entregas</a></li>
-							<li><a href="#" class="links-footer">Cómo funciona</a></li>
-							<li><a href="#" class="links-footer">Países</a></li>
-							<li><a href="#" class="links-footer">Seguridad</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 hidden-xs">
-						<ul>
-							<li><a href="#" class="links-footer">Oportunidades</a></li>
-							<li><a href="#" class="links-footer">Nuestra historia</a></li>
-							<li><a href="#" class="links-footer">API de LabCar</a></li>
-							<li><a href="#" class="links-footer">Eventos</a></li>
-							<li><a href="#" class="links-footer">Desarrolladores</a></li>
-							<li><a href="#" class="links-footer">Servicios</a></li>
-							<li><a href="#" class="links-footer">Laboratoria</a></li>
-							<li><a href="#" class="links-footer">Coders</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-						<!--se muestra solo en versión mobile-->
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-							<!-- iconos abajito-->
-							<i class="fa fa-facebook iconos-bottom" aria-hidden="true"></i>
-							<i class="fa fa-twitter iconos-bottom" aria-hidden="true"></i>
-							<i class="fa fa-linkedin iconos-bottom" aria-hidden="true"></i>
-							<i class="fa fa-apple iconos-bottom" aria-hidden="true"></i>
-							<i class="fa fa-play iconos-bottom" aria-hidden="true"></i>
-
-						</div>
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 apps">
-							<img src="assets/img/app-store.png" class="img-responsive img-footer" alt="apple">
-							<img src="assets/img/google-play.png" class="img-responsive img-footer" alt="android">
-						</div>
-					</div>
+	<section id="footer">
+		<footer>
+			<div class="container">
+				<div class="row logo-white-footer">
+					<img class="img-responsive logo-footer" src="assets/img/logo-blanco.png" alt="logo-white">
 					<hr>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-						<p>© 2017 LabCar technologies Inc.</p>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="col-md-offset-3 col-md-3 col-xs-6">
+							<ul>
+								<li><a href="#" class="links-footer">Viaja</a></li>
+								<li><a href="#" class="links-footer">Conduce</a></li>
+								<li><a href="#" class="links-footer">Ciudades</a></li>
+								<li><a href="#" class="links-footer">Tarifas</a></li>
+								<li><a href="#" class="links-footer">Entregas</a></li>
+								<li><a href="#" class="links-footer">Cómo funciona</a></li>
+								<li><a href="#" class="links-footer">Países</a></li>
+								<li><a href="#" class="links-footer">Seguridad</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3 hidden-xs">
+							<ul>
+								<li><a href="#" class="links-footer">Oportunidades</a></li>
+								<li><a href="#" class="links-footer">Nuestra historia</a></li>
+								<li><a href="#" class="links-footer">API de LabCar</a></li>
+								<li><a href="#" class="links-footer">Eventos</a></li>
+								<li><a href="#" class="links-footer">Desarrolladores</a></li>
+								<li><a href="#" class="links-footer">Servicios</a></li>
+								<li><a href="#" class="links-footer">Laboratoria</a></li>
+								<li><a href="#" class="links-footer">Coders</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<!--se muestra solo en versión mobile-->
+							<div class="col-xs-12 hidden-lg hidden-sm hidden-md">
+								<!-- iconos abajito-->
+								<i class="fa fa-facebook iconos-bottom" aria-hidden="true"></i>
+								<i class="fa fa-twitter iconos-bottom" aria-hidden="true"></i>
+								<i class="fa fa-linkedin iconos-bottom" aria-hidden="true"></i>
+								<i class="fa fa-apple iconos-bottom" aria-hidden="true"></i>
+								<i class="fa fa-play iconos-bottom" aria-hidden="true"></i>
+
+							</div>
+							<div class="apps">
+								<img src="assets/img/app-store.png" class="img-responsive img-footer" alt="apple">
+								<img src="assets/img/google-play.png" class="img-responsive img-footer" alt="android">
+							</div>
+						</div>
 					</div>
 				</div>
-			</footer>
-
-			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYBODf36sI09BLoZ8B_VdDc2q7vhDbOo&callback=initMap&libraries=places"></script>
-			<!-- Script de jQuery y Bootstrap -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-			<script type="text/javascript" src="assets/js/main.js"></script>
-		</body>
-		</html>
+				<div class="row">
+					<div class="col-md-3 hidden-xs">
+						<a href="#"><i class="fa fa-facebook iconos-bottom" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter iconos-bottom" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin iconos-bottom" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-apple iconos-bottom" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-play iconos-bottom" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<hr>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+				<p class="subfooter">© 2017 LabCar technologies Inc.</p>
+			</div>
+		</footer>
+		</section>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIYBODf36sI09BLoZ8B_VdDc2q7vhDbOo&callback=initMap&libraries=places"></script>
+	<!-- Script de jQuery y Bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
