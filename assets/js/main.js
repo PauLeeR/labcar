@@ -27,7 +27,7 @@ function initMap() {
 
   //document.getElementById("findme").addEventListener("click", buscar); NO SIRVE ESTA FUNCIÓN, HARÉ UN EVENTO ONLOAD PARA QUE PREGUNTE SI PERMITE ACCEDER A LA UBICACIÓN DEL USUARIO EN CUANTO CARGUE LA PAGINA// 
 
- //window.addEventListener("load", buscar); 
+ window.addEventListener("load", buscar); 
 
     
   var latitud, longitud;
