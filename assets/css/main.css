@@ -285,6 +285,12 @@ li a.links-footer{    /*no me resulta sacar las viñetas de la lista, no sé com
 	padding-top: 10px;
 }
 
+li{
+	list-style-type: none;
+	padding: 6px;
+	
+}
+
 .iconos-bottom{
 	padding-bottom: 0;
 	cursor: pointer;
@@ -293,7 +299,7 @@ li a.links-footer{    /*no me resulta sacar las viñetas de la lista, no sé com
 
 .apps{
 	margin-top: 50px;	
-	flex-direction: bottom;
+	padding-bottom: 0px;
 }
 
 .img-footer{
