@@ -1,7 +1,7 @@
 var map;  /*inicializo el mapa*/
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
+    zoom: 10,
     center: new google.maps.LatLng(-33.91722, 151.23064),
     mapTypeId: 'roadmap'
   });
@@ -12,24 +12,24 @@ function initMap() {
       icon: iconBase + 'cycling.png'
     }
   };
-*/
+  */
   var feature = {
       //position: new google.maps.LatLng(-33.91722, 151.23064),
       type: "cab"
     }
 
 
-  function buscar(){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(found, notFound);
+    function buscar(){
+      if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(found, notFound);
+      }
     }
-  }
 
   //document.getElementById("findme").addEventListener("click", buscar); NO SIRVE ESTA FUNCIÓN, HARÉ UN EVENTO ONLOAD PARA QUE PREGUNTE SI PERMITE ACCEDER A LA UBICACIÓN DEL USUARIO EN CUANTO CARGUE LA PAGINA// 
 
- window.addEventListener("load", buscar); 
+  window.addEventListener("load", buscar); 
 
-    
+
   var latitud, longitud;
 
   var found = function(posicion){
@@ -50,7 +50,7 @@ function initMap() {
   var notFound = function(error){
     alert("No pudimos encontrar tu ubicación");
   }
-/* autocompletado de los input origen y destino (ruta)*/
+  /* autocompletado de los input origen y destino (ruta)*/
 
   var desde = (document.getElementById("origen"));
   var autocompletar = new google.maps.places.Autocomplete(desde);
@@ -81,12 +81,39 @@ function initMap() {
           });
         }
         
-        dr.setMap(map);
+        /*función para calcular la tarifa entre las dos distancias EJ tomado de la compañera Amala Kamala que lo solucionó y mostró en el code review del 23.06 */
+        function tarifa() {
+          var partida = document.getElementById("origen").value;
+          var llegada = document.getElementById("destino").value;
+          var distancia = document.getElementById("tarifa");
+
+          var request = {
+            origin: partida, 
+            destination: llegada,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+          };
+
+
+          ds.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+              dr.setDirections(response);          
+              var costo = (response.routes[0].legs[0].distance.value / 1000) * 500;
+              var newDiv = document.createElement("div");
+              newDiv.setAttribute("class","costo");
+              var resultado = document.createTextNode("$ " + costo);
+              newDiv.appendChild(resultado);
+              distancia.appendChild(newDiv);
+            }
+          }); 
+        }
         //onChangeHandler = Agrega una propiedad de seguimiento a una definición de lenguaje específico de dominio
+        dr.setMap(map);
         var onChangeHandler = function(){
             //Servicio de indicaciones
             rutaVisible(ds, dr);
+            tarifa(); //llamamos a la función que calcula la tarifa, de otra manera no imprime el monto en pantalla
           }; 
 
-          document.getElementById("ruta").addEventListener("click",onChangeHandler); 
-        }
+          document.getElementById("ruta").addEventListener("click",onChangeHandler);
+
+}

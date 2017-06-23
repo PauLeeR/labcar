@@ -18,6 +18,7 @@ body {
 	color: #fff;
 	font-weight: 800;
 	background-position: center bottom;
+	background-attachment: fixed; /*hace q la foto se quede fija en el fondo y lo de adelante se mueva*/
 }
 
 .navbar-default{
@@ -244,6 +245,17 @@ div.container-fluid.white-border {
 	border: 1px solid white;
 }
 
+#tarifa{
+	width: 300px;
+	height: 50px;
+	color: white;
+	background-color: transparent;
+	padding: 0px;
+	border-color: #fff;
+	margin-left: 15px;
+	margin-top: 300px;
+}
+
 /*footer*/
 #footer{
 	background-color: #2b2b2b;
@@ -281,6 +293,7 @@ li a.links-footer{    /*no me resulta sacar las viñetas de la lista, no sé com
 
 .apps{
 	margin-top: 50px;	
+	flex-direction: bottom;
 }
 
 .img-footer{
